@@ -6,6 +6,7 @@
     <p v-on:mousemove="atualizarXY">Mouse: {{ x }} e {{ y }}</p>
     <span v-on:mousemove.stop="parar">PARAR AQUI!!</span>
 
+    <input type="text" v-on:keyup.enter.alt="exibirAlerta">
 </div>
 
 <script>
@@ -27,6 +28,9 @@
             },
             parar(e) {
                 e.stopPropagation()
+            },
+            exibirAlerta() {
+                alert('Estou te Alertando')
             }
         }         
     })
